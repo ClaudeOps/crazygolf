@@ -35,8 +35,8 @@
   td { padding: 5px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
   td.hole { font-weight: 700; font-size: 17px; width: 48px; }
   .tee { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 38px; border-radius: 7px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 22px; }
-  .tee.long { background: var(--green); color: #fff; }
-  .tee.short { background: var(--pale); color: var(--green); border: 1px solid var(--pale-line); }
+  .tee.short { background: var(--green); color: #fff; }
+  .tee.long { background: var(--pale); color: var(--green); border: 1px solid var(--pale-line); }
   .tag { display: inline-block; font-size: 12px; font-weight: 800; padding: 4px 8px; border-radius: 5px; border: 1px solid; }
   .tag.ctp { background: var(--ctp-bg); color: var(--ctp); border-color: var(--ctp-line); }
   .tag.nd { background: var(--nd-bg); color: var(--nd); border-color: var(--nd-line); }
@@ -90,8 +90,8 @@
 
 <!-- 
     <div class="legend">
-      <span>74 &amp; under: <span class="tee long">3</span> on holes 1, 3, 5, 7, 9 and 10, 12, 14, 16, 18 · <span class="tee short">2</span> on the rest</span>
-      <span>75 &amp; over: <span class="tee long">4</span> on those same holes · <span class="tee short">3</span> on the rest</span>
+      <span>74 &amp; under: <span class="tee short">3</span> on holes 1, 3, 5, 7, 9 and 10, 12, 14, 16, 18 · <span class="tee long">2</span> on the rest</span>
+      <span>75 &amp; over: <span class="tee short">4</span> on those same holes · <span class="tee long">3</span> on the rest</span>
     </div>
  -->
   </section>
@@ -144,7 +144,7 @@
         <tr><td>Front side winners</td><td>$40</td></tr>
         <tr><td>Back side winners</td><td>$40</td></tr>
         <tr><td>18-hole total winners</td><td>$20</td></tr>
-        <tr><td>Each closest-to-pin and 2nd-shot hole</td><td>$10</td></tr>
+        <tr><td>Each closest-to-pin and 2nd-shot hole (x10)</td><td>$10</td></tr>
       </tbody>
     </table>
     <div class="card" style="margin-top:12px">
@@ -160,24 +160,24 @@
 <footer>Good luck out there.</footer>
 
 <script>
-  // Holes where the "long" tee is played; all others play the "short" tee.
-  var LONG = [1,3,5,7,9,10,12,14,16,18];
+  // Holes where the "short" tee is played; all others play the "long" tee.
+  var SHORT = [1,3,5,7,9,10,12,14,16,18];
   var GAMES = {3:"CTP",6:"CTP",8:"CTP",11:"CTP",12:"CTP",14:"CTP",7:"2ND",9:"2ND",16:"2ND",18:"2ND"};
-  var UNDER = {long: 3, short: 2};  // 74 and younger
-  var OVER  = {long: 4, short: 3};  // 75 and older
+  var UNDER = {short: 3, long: 2};  // 74 and younger
+  var OVER  = {short: 4, long: 3};  // 75 and older
 
-  function tee(t, isLong) {
-    return '<span class="tee ' + (isLong ? "long" : "short") + '">' + (isLong ? t.long : t.short) + '</span>';
+  function tee(t, isShort) {
+    return '<span class="tee ' + (isShort ? "short" : "long") + '">' + (isShort ? t.short : t.long) + '</span>';
   }
 
   function rows(from, to) {
     var html = "";
     for (var h = from; h <= to; h++) {
-      var isLong = LONG.indexOf(h) !== -1;
+      var isShort = SHORT.indexOf(h) !== -1;
       var g = GAMES[h];
       var tag = g ? '<span class="tag ' + (g === "CTP" ? "ctp" : "nd") + '">' + g + '</span>' : '';
-      html += '<tr><td class="hole">' + h + '</td><td>' + tee(UNDER, isLong) + '</td><td>' +
-              tee(OVER, isLong) + '</td><td>' + tag + '</td></tr>';
+      html += '<tr><td class="hole">' + h + '</td><td>' + tee(UNDER, isShort) + '</td><td>' +
+              tee(OVER, isShort) + '</td><td>' + tag + '</td></tr>';
     }
     return html;
   }
