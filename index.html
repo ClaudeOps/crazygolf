@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross Creek · Monday, Nov 23</title>
+<meta name="description" content="Tees, pin holes, Stableford scoring and tee times for Monday's game at Cross Creek.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1F4D3A; --green-dark: #143327; --pale: #E3EEE7; --pale-line: #A9C4B3;
+    --ink: #141A16; --muted: #4A544E; --line: #D5DDD8; --soft: #F4F6F5;
+    --ctp-bg: #FBEFE6; --ctp: #A14716; --ctp-line: #E9C3A8;
+    --nd-bg: #E8F0FA; --nd: #1C5596; --nd-line: #B9CDE8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.45; }
+  h1, h2, h3 { font-family: "Space Grotesk", Inter, sans-serif; line-height: 1.1; margin: 0; }
+  a { color: var(--green); }
+  header { background: var(--green); color: #fff; padding: 28px 20px 24px; }
+  header .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #BFD8C9; }
+  header h1 { font-size: 40px; margin: 6px 0 4px; }
+  header p { margin: 0; color: #E3EEE7; font-size: 16px; }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; display: flex; flex-direction: column; gap: 28px; }
+  section > h2 { font-size: 24px; margin-bottom: 12px; }
+
+
+  .nines { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .nine h3 { font-size: 20px; }
+  .nine .sub { font-size: 14px; font-weight: 600; color: var(--green); margin: 2px 0 10px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td { padding: 5px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  td.hole { font-weight: 700; font-size: 17px; width: 48px; }
+  .tee { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 38px; border-radius: 7px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 22px; }
+  .tee.long { background: var(--green); color: #fff; }
+  .tee.short { background: var(--pale); color: var(--green); border: 1px solid var(--pale-line); }
+  .tag { display: inline-block; font-size: 12px; font-weight: 800; padding: 4px 8px; border-radius: 5px; border: 1px solid; }
+  .tag.ctp { background: var(--ctp-bg); color: var(--ctp); border-color: var(--ctp-line); }
+  .tag.nd { background: var(--nd-bg); color: var(--nd); border-color: var(--nd-line); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; color: var(--muted); margin-top: 14px; align-items: center; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .tee { width: 26px; height: 22px; font-size: 13px; border-radius: 5px; }
+
+  .points { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .points div { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 12px 0; text-align: center; }
+  .points b { display: block; font-family: "Space Grotesk", sans-serif; font-size: 30px; line-height: 1; }
+  .points span { font-size: 13px; font-weight: 600; color: var(--muted); }
+  .points .par { background: var(--green); border-color: var(--green); color: #fff; }
+  .points .par span { color: #D6E6DC; }
+
+  .card { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card h3 { font-size: 17px; margin-bottom: 6px; }
+  .card p, .card ul { margin: 0; }
+  .card ul { padding-left: 18px; }
+  .card li + li { margin-top: 4px; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+
+  .money td:last-child { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 16px 32px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Monday, November 23</div>
+  <h1>Cross Creek</h1>
+  <p>$10 entry, small bills appreciated · Team Stableford</p>
+</header>
+
+<main>
+  <section aria-labelledby="tees-h">
+    <h2 id="tees-h">Tees</h2>
+
+    <div class="nines">
+      <div class="nine">
+        <h3>Front 9</h3>
+        <p class="sub">Play your own ball · take 3 scores</p>
+        <table><thead><tr><th scope="col">Hole</th><th scope="col">74 &amp; under</th><th scope="col">75 &amp; over</th><th scope="col">Pin game</th></tr></thead>
+          <tbody id="front"></tbody></table>
+      </div>
+      <div class="nine">
+        <h3>Back 9</h3>
+        <p class="sub">Shamble · take 3 scores</p>
+        <table><thead><tr><th scope="col">Hole</th><th scope="col">74 &amp; under</th><th scope="col">75 &amp; over</th><th scope="col">Pin game</th></tr></thead>
+          <tbody id="back"></tbody></table>
+      </div>
+    </div>
+
+<!-- 
+    <div class="legend">
+      <span>74 &amp; under: <span class="tee long">3</span> on holes 1, 3, 5, 7, 9 and 10, 12, 14, 16, 18 · <span class="tee short">2</span> on the rest</span>
+      <span>75 &amp; over: <span class="tee long">4</span> on those same holes · <span class="tee short">3</span> on the rest</span>
+    </div>
+ -->
+  </section>
+
+  <section aria-labelledby="pts-h">
+    <h2 id="pts-h">Stableford points</h2>
+    <div class="points">
+      <div><b>4</b><span>Eagle</span></div>
+      <div><b>3</b><span>Birdie</span></div>
+      <div class="par"><b>2</b><span>Par</span></div>
+      <div><b>1</b><span>Bogey</span></div>
+      <div><b>0</b><span>Double+</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="fmt-h">
+    <h2 id="fmt-h">Format</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Front 9: own ball</h3>
+        <p>Everyone plays their own ball. Take the best 3 scores on each hole.</p>
+      </div>
+      <div class="card">
+        <h3>Back 9: shamble</h3>
+        <p>Any two players go to one drive and the other two go to another drive. Choose the pairings after the drives. Play your own ball in from there and take 3 scores.</p>
+      </div>
+      <div class="card">
+        <h3><span class="tag ctp">CTP</span> Team closest to pin</h3>
+        <p>Holes 3, 6, 8, 11, 12 and 14. The team needs 2 balls on the green, and the collar counts as on. Must make par to count.</p>
+      </div>
+      <div class="card">
+        <h3><span class="tag nd">2ND</span> Team second shot closest</h3>
+        <p>Holes 7, 9, 16 and 18. <!-- The 2-on-the-green rule applies, and --> You must make par for it to count.</p>
+      </div>
+      <div class="card">
+        <h3>Breakfast ball</h3>
+        <p>One off the tee, and it must be played (no choosing). You can use it for the closest-to-pin holes.</p>
+      </div>
+      <div class="card">
+        <h3>Mulligan</h3>
+        <p>One, usable anywhere. If you use it, you must play it. You can use it for the closest-to-pin holes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="money-h">
+    <h2 id="money-h">Prize money</h2>
+    <table class="money">
+      <tbody>
+        <tr><td>Front side winners</td><td>$40</td></tr>
+        <tr><td>Back side winners</td><td>$40</td></tr>
+        <tr><td>18-hole total winners</td><td>$20</td></tr>
+        <tr><td>Each closest-to-pin and 2nd-shot hole</td><td>$10</td></tr>
+      </tbody>
+    </table>
+    <div class="card" style="margin-top:12px">
+      <ul>
+        <li><strong>Ties:</strong> scorecard playoff, highest handicap hole first, then second highest, and so on.</li>
+        <li><strong>Hole in one</strong> wins all the prize money.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>Good luck out there.</footer>
+
+<script>
+  // Holes where the "long" tee is played; all others play the "short" tee.
+  var LONG = [1,3,5,7,9,10,12,14,16,18];
+  var GAMES = {3:"CTP",6:"CTP",8:"CTP",11:"CTP",12:"CTP",14:"CTP",7:"2ND",9:"2ND",16:"2ND",18:"2ND"};
+  var UNDER = {long: 3, short: 2};  // 74 and younger
+  var OVER  = {long: 4, short: 3};  // 75 and older
+
+  function tee(t, isLong) {
+    return '<span class="tee ' + (isLong ? "long" : "short") + '">' + (isLong ? t.long : t.short) + '</span>';
+  }
+
+  function rows(from, to) {
+    var html = "";
+    for (var h = from; h <= to; h++) {
+      var isLong = LONG.indexOf(h) !== -1;
+      var g = GAMES[h];
+      var tag = g ? '<span class="tag ' + (g === "CTP" ? "ctp" : "nd") + '">' + g + '</span>' : '';
+      html += '<tr><td class="hole">' + h + '</td><td>' + tee(UNDER, isLong) + '</td><td>' +
+              tee(OVER, isLong) + '</td><td>' + tag + '</td></tr>';
+    }
+    return html;
+  }
+
+  document.getElementById("front").innerHTML = rows(1, 9);
+  document.getElementById("back").innerHTML = rows(10, 18);
+</script>
+</body>
+</html>
