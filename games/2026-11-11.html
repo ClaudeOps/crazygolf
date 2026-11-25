@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wednesday, Nov 11 · It's Not Rocket Science (It's Harder)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="hero"><div class="inner">
+  <div class="eyebrow">Wednesday, November 11</div>
+  <h1>Cross Creek</h1>
+  <p>Executive course, par 60 · $10 entry, small bills appreciated · Score Forty, net</p>
+</div></div>
+
+<main>
+  <section aria-labelledby="game-h">
+    <h2 id="game-h">Score Forty</h2>
+    <div class="card">
+      <ul>
+        <li>This will be <strong>net scores</strong>. Scorecards will be provided with the appropriate dots given.</li>
+        <li>Must have exactly <strong>40 scores</strong> at the end of 18. Any more or any less will be DQ'd.</li>
+        <li>Decide how many scores will be taken before teeing off on the next hole.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="tees-h">
+    <h2 id="tees-h">Tees</h2>
+    <div class="nines">
+      <div>
+        <h3>Front 9</h3>
+        <table><thead><tr><th scope="col">Hole</th><th scope="col">Par</th><th scope="col">74 &amp; under</th><th scope="col">75 &amp; over</th><th scope="col">Pin game</th></tr></thead>
+          <tbody id="front"></tbody></table>
+      </div>
+      <div>
+        <h3>Back 9</h3>
+        <table><thead><tr><th scope="col">Hole</th><th scope="col">Par</th><th scope="col">74 &amp; under</th><th scope="col">75 &amp; over</th><th scope="col">Pin game</th></tr></thead>
+          <tbody id="back"></tbody></table>
+      </div>
+    </div>
+    <div class="legend">
+      <span>Tee boxes run from 1 (longest) to 4 (shortest).</span>
+      <span>74 &amp; under: <span class="tee long">2</span> on every hole · 75 &amp; over: <span class="tee long">3</span> on every hole</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="fmt-h">
+    <h2 id="fmt-h">Format</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Own ball</h3>
+        <p>Everyone plays their own ball.</p>
+      </div>
+      <div class="card">
+        <h3><span class="tag ctp">CTP</span> Team closest to pin</h3>
+        <p>Holes 3, 6, 8, 11, 12 and 14. $10 each ($60 total). Must make a par to win it.</p>
+      </div>
+      <div class="card">
+        <h3>Breakfast ball</h3>
+        <p>One, usable on any tee shot. It must be played.</p>
+      </div>
+      <div class="card">
+        <h3>Mulligan</h3>
+        <p>One, usable anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="times-h">
+    <h2 id="times-h">Tee times</h2>
+    <div class="groups">
+      <div class="card"><h3>7:12</h3><ul><li>Terry P</li><li>Pap</li><li>Chico</li><li>Bob F</li></ul></div>
+      <div class="card"><h3>7:19</h3><ul><li>Ed</li><li>Ray</li><li>Claude</li><li>Dave M</li></ul></div>
+      <div class="card"><h3>7:26</h3><ul><li>Joe</li><li>Mark</li><li>Doug</li><li>Mike B</li></ul></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="money-h">
+    <h2 id="money-h">Payouts</h2>
+    <p class="lead">$60 for Score Forty, $60 for team closest to pin.</p>
+    <table class="money">
+      <tbody>
+        <tr><td>Front 9</td><td>$24</td></tr>
+        <tr><td>Back 9</td><td>$24</td></tr>
+        <tr><td>Total</td><td>$12</td></tr>
+        <tr><td>Team closest to pin (6 holes × $10)</td><td>$60</td></tr>
+      </tbody>
+    </table>
+    <div class="card" style="margin-top:12px">
+      <ul>
+        <li><strong>Hole in one</strong> wins the pot.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>Good luck out there.</footer>
+
+<script src="../courses.js"></script>
+<script src="../games.js"></script>
+<script src="../site.js"></script>
+<script>
+  var PAR = window.COURSES["Cross Creek"].par;
+  var GAME_TAGS = {3: "CTP", 6: "CTP", 8: "CTP", 11: "CTP", 12: "CTP", 14: "CTP"};
+  // One tee per age group all round: 2s for 74 & under, 3s for 75 & over.
+  function tee(n) { return '<span class="tee long">' + n + '</span>'; }
+  function rows(from, to) {
+    var html = "";
+    for (var h = from; h <= to; h++) {
+      var tag = GAME_TAGS[h] ? '<span class="tag ctp">CTP</span>' : '';
+      html += '<tr><td class="hole">' + h + '</td><td class="par">' + PAR[h - 1] + '</td><td>' + tee(2) + '</td><td>' + tee(3) + '</td><td>' + tag + '</td></tr>';
+    }
+    return html;
+  }
+  document.getElementById("front").innerHTML = rows(1, 9);
+  document.getElementById("back").innerHTML = rows(10, 18);
+</script>
+</body>
+</html>
