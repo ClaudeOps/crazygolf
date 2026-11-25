@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wednesday, Nov 25 · It's Not Rocket Science (It's Harder)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="hero"><div class="inner">
+  <div class="eyebrow">Wednesday, November 25</div>
+  <h1>Cross Creek</h1>
+  <p>Executive course, par 60 · $10 entry, small bills appreciated · 3 formats, 6 holes each</p>
+</div></div>
+
+<main>
+  <section aria-labelledby="fmt-h">
+    <h2 id="fmt-h">The game</h2>
+    <p class="lead">Your foursome is one team. On every hole it splits into two 2-person pairs, and both pairs play toward the same team score. Pick partners before the drives.</p>
+    <div class="formats">
+      <div class="fmt" style="--c: var(--alt)">
+        <span class="holes">Holes 1–6</span>
+        <h3>Alternate shot</h3>
+        <p>Everyone drives, and each pair picks one drive. The partner whose drive wasn't picked hits next, then alternate until the ball is in.</p>
+        <span class="take">Best <b>2</b> scores count</span>
+      </div>
+      <div class="fmt" style="--c: var(--sham)">
+        <span class="holes">Holes 7–12</span>
+        <h3>Shamble</h3>
+        <p>Each pair picks one drive, then both partners play their own ball in from there.</p>
+        <span class="take">Best <b>3</b> scores count</span>
+      </div>
+      <div class="fmt" style="--c: var(--scr)">
+        <span class="holes">Holes 13–18</span>
+        <h3>Scramble</h3>
+        <p>Each pair picks one drive, then scramble in from there, picking the best shot each time.</p>
+        <span class="take">Best <b>2</b> scores count</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <h3>22-inch rule</h3>
+      <p>Putt the ball in, or stop when it's within 22 inches of the hole.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="pair-h">
+    <h2 id="pair-h">Partner rotation</h2>
+    <p class="lead">You must play with each person twice in each format. One way to do it, with players A, B, C and D, repeated in every 6-hole block:</p>
+    <table class="pairs">
+      <thead><tr><th scope="col">Holes in each block</th><th scope="col">Pairs</th></tr></thead>
+      <tbody>
+        <tr><td>1st and 2nd</td><td><b>A + B</b> and <b>C + D</b></td></tr>
+        <tr><td>3rd and 4th</td><td><b>A + C</b> and <b>B + D</b></td></tr>
+        <tr><td>5th and 6th</td><td><b>A + D</b> and <b>B + C</b></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="tee-h">
+    <h2 id="tee-h">Moving tees</h2>
+    <p class="lead">Fall back or fall forward: the whole foursome moves together, based on the best score of the two pairs. Tee boxes run from 1 (longest) to 4 (shortest).</p>
+    <div class="start">
+      <div>74 and younger start on <span class="tee-badge">3</span></div>
+      <div>75 and older start on <span class="tee-badge">4</span></div>
+    </div>
+    <div class="moves">
+      <div class="back"><b>Par or birdie</b><span>Move back to a longer tee next hole (3 → 2)</span></div>
+      <div class="fwd"><b>Bogey or worse</b><span>Move up to a shorter tee next hole (3 → 4)</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="holes-h">
+    <h2 id="holes-h">Hole by hole</h2>
+    <div class="nines">
+      <div>
+        <h3>Front 9</h3>
+        <table><thead><tr><th scope="col">Hole</th><th scope="col">Par</th><th scope="col"><abbr title="Handicap (1 = hardest)">Hcp</abbr></th><th scope="col">Format</th><th scope="col">Pin game</th></tr></thead>
+          <tbody id="front"></tbody></table>
+      </div>
+      <div>
+        <h3>Back 9</h3>
+        <table><thead><tr><th scope="col">Hole</th><th scope="col">Par</th><th scope="col"><abbr title="Handicap (1 = hardest)">Hcp</abbr></th><th scope="col">Format</th><th scope="col">Pin game</th></tr></thead>
+          <tbody id="back"></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="pin-h">
+    <h2 id="pin-h">Pin holes and extras</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3><span class="tag ctp">CTP</span> Team closest to pin</h3>
+        <p>Holes 3, 8, 12 and 14. $10 each ($40 total).</p>
+      </div>
+      <div class="card">
+        <h3><span class="tag nd">2ND</span> Second shot closest</h3>
+        <p>Holes 10 and 18. $10 each ($20 total). Must make par to count.</p>
+      </div>
+      <div class="card">
+        <h3>Breakfast ball</h3>
+        <p>One, on the first tee. If you use it, you must play it.</p>
+      </div>
+      <div class="card">
+        <h3>Mulligan</h3>
+        <p>One per round, usable anywhere, including the closest-to-pin and second-shot holes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="money-h">
+    <h2 id="money-h">Payouts</h2>
+    <table class="money">
+      <tbody>
+        <tr><td>Front 9</td><td>$24</td></tr>
+        <tr><td>Back 9</td><td>$24</td></tr>
+        <tr><td>18-hole total</td><td>$12</td></tr>
+        <tr><td>Closest to pin (4 holes × $10)</td><td>$40</td></tr>
+        <tr><td>Second shot closest (2 holes × $10)</td><td>$20</td></tr>
+      </tbody>
+    </table>
+    <div class="card" style="margin-top:12px">
+      <ul>
+        <li><strong>Lowest team score wins.</strong></li>
+        <li><strong>Ties:</strong> best score on the hardest hole (#18), then the next hardest: #3, #15, #5, #13, #9, #10, #7 and so on down the handicap list.</li>
+        <li><strong>Hole in one</strong> wins the pot.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>Good luck out there.</footer>
+
+<script src="../courses.js"></script>
+<script src="../games.js"></script>
+<script src="../site.js"></script>
+<script>
+  var PAR = window.COURSES["Cross Creek"].par;
+  var HCP = window.COURSES["Cross Creek"].hcp;
+  var GAME_TAGS = {3: "CTP", 8: "CTP", 12: "CTP", 14: "CTP", 10: "2ND", 18: "2ND"};
+  function format(h) {
+    if (h <= 6)  return '<span class="fpill alt">Alternate shot</span>';
+    if (h <= 12) return '<span class="fpill sham">Shamble</span>';
+    return '<span class="fpill scr">Scramble</span>';
+  }
+  function rows(from, to) {
+    var html = "";
+    for (var h = from; h <= to; h++) {
+      var g = GAME_TAGS[h];
+      var tag = g ? '<span class="tag ' + (g === "CTP" ? "ctp" : "nd") + '">' + g + '</span>' : '';
+      html += '<tr><td class="hole">' + h + '</td><td class="par">' + PAR[h - 1] + '</td><td class="hcp">' + HCP[h - 1] + '</td><td>' + format(h) + '</td><td>' + tag + '</td></tr>';
+    }
+    return html;
+  }
+  document.getElementById("front").innerHTML = rows(1, 9);
+  document.getElementById("back").innerHTML = rows(10, 18);
+</script>
+</body>
+</html>
