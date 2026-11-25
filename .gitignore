@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code: personal settings stay local, shared ones can be committed
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Vercel CLI (created if you ever run `vercel` locally; holds project IDs)
+.vercel/
+
+# Secrets, just in case
+.env
+.env*.local
+
+# Claude Code: personal settings
+.claude/settings.local.json
+
+# Node, if you ever add tooling
+node_modules/
