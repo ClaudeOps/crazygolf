@@ -2,8 +2,11 @@
 (function () {
   var root = new URL(".", document.currentScript.src); // site root, wherever the page lives
   var here = location.pathname.replace(/\.html$/, "");
+  // If games.js failed to load, still show the site bar (title links home), just without the archive menu.
+  var games = window.GAMES || [];
+  var hasMenu = games.length > 0;
 
-  var items = window.GAMES.map(function (g, i) {
+  var items = games.map(function (g, i) {
     var href = new URL(g.path, root).href;
     var isHere = new URL(href).pathname.replace(/\.html$/, "") === here;
     return '<li><a href="' + href + '"' + (isHere ? ' aria-current="page"' : "") + '>' +
@@ -16,14 +19,17 @@
   bar.innerHTML =
     '<div class="inner">' +
       '<a class="site-title" href="' + root.href + '">It’s Not Rocket Science <span>(It’s Harder)</span></a>' +
+      (hasMenu ?
       '<button class="menu-btn" type="button" aria-label="Game archive" aria-expanded="false" aria-controls="archive">' +
         '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>' +
-      '</button>' +
+      '</button>' : "") +
     '</div>' +
+    (hasMenu ?
     '<nav class="menu-panel" id="archive" aria-label="Game archive" hidden>' +
       '<div class="inner"><h2>Game archive</h2><ul>' + items + '</ul></div>' +
-    '</nav>';
+    '</nav>' : "");
   document.body.insertBefore(bar, document.body.firstChild);
+  if (!hasMenu) return;
 
   var btn = bar.querySelector(".menu-btn"), panel = bar.querySelector(".menu-panel");
   function setOpen(open) { panel.hidden = !open; btn.setAttribute("aria-expanded", open ? "true" : "false"); }

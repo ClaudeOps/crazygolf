@@ -102,4 +102,4 @@ td.hole { font-weight: 700; font-size: 17px; width: 50px; }
 .moves .fwd { background: var(--ctp-bg); border: 1px solid var(--ctp-line); }
 .moves b { display: block; font-size: 17px; margin-bottom: 2px; }
 .moves span { font-size: 14px; color: var(--muted); }
-td.par { font-weight: 600; color: var(--muted); width: 44px; }
+td.par, td.hcp { font-weight: 600; color: var(--muted); width: 44px; }

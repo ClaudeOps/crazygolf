@@ -150,7 +150,7 @@
     for (var h = from; h <= to; h++) {
       var g = GAME_TAGS[h];
       var tag = g ? '<span class="tag ' + (g === "CTP" ? "ctp" : "nd") + '">' + g + '</span>' : '';
-      html += '<tr><td class="hole">' + h + '</td><td class="par">' + PAR[h - 1] + '</td><td class="par">' + HCP[h - 1] + '</td><td>' + format(h) + '</td><td>' + tag + '</td></tr>';
+      html += '<tr><td class="hole">' + h + '</td><td class="par">' + PAR[h - 1] + '</td><td class="hcp">' + HCP[h - 1] + '</td><td>' + format(h) + '</td><td>' + tag + '</td></tr>';
     }
     return html;
   }
