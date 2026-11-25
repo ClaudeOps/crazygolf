@@ -52,7 +52,7 @@ games/          One self-contained page per game, named YYYY-MM-DD.html.
 3. Add an entry to `games.js`.
 4. Add a link to the fallback `<ul>` in `index.html`.
 5. For a new course, add it to `courses.js` first.
-6. Deploy: `npx vercel --prod` from this folder.
+6. Deploy: merge to `main` on GitHub. Vercel deploys from `main` automatically.
 
 ## Scoring conventions
 
