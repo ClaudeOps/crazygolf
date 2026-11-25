@@ -12,7 +12,7 @@ a { color: var(--green); }
 
 /* ---------- Site bar + archive menu ---------- */
 .site-bar { position: sticky; top: 0; z-index: 20; background: var(--green-dark); color: #fff; }
-.site-bar .inner { max-width: 760px; margin: 0 auto; padding: 6px 8px 6px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.site-bar > .inner { max-width: 760px; margin: 0 auto; padding: 6px 8px 6px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .site-title { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 17px; color: #fff; text-decoration: none; line-height: 1.2; }
 .site-title span { color: #BFD8C9; font-weight: 500; }
 .menu-btn { flex-shrink: 0; width: 48px; height: 48px; border: 0; border-radius: 10px; background: transparent; color: #fff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
@@ -103,3 +103,12 @@ td.hole { font-weight: 700; font-size: 17px; width: 50px; }
 .moves b { display: block; font-size: 17px; margin-bottom: 2px; }
 .moves span { font-size: 14px; color: var(--muted); }
 td.par, td.hcp { font-weight: 600; color: var(--muted); width: 44px; }
+
+/* ---------- Rained out ----------
+   Add class="rained-out" to <body> and put <p class="rainout-stamp" role="note">Rained out</p>
+   right after the hero. Keep the stamp outside <main>: the grayscale filter would trap a fixed child. */
+.rained-out .hero, .rained-out main { filter: grayscale(1); }
+.rainout-stamp { position: fixed; top: 50%; left: 50%; z-index: 15; transform: translate(-50%, -50%) rotate(-12deg); margin: 0; pointer-events: none;
+  padding: 6px 22px; border: 6px solid var(--nd); border-radius: 14px; background: rgba(255,255,255,.6); color: var(--nd);
+  font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: clamp(40px, 12vw, 72px); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 8px 30px rgba(0,0,0,.18); }
