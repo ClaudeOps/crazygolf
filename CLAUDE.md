@@ -62,7 +62,7 @@ games/          One self-contained page per game, named YYYY-MM-DD.html.
 
 ## Content rules (important)
 
-- **No player names and no tee times** on the site.
+- **Player names and tee times are allowed.** Show them as the sheet lists them, in a "Tee times" section (`.groups` of `.card`s, one per tee time).
 - **Show both age groups side by side** (74 and younger / 75 and older). No toggle or switch.
 - **Stick to the organizer's wording.** Don't present interpretations as rules. If something on the sheet is ambiguous, list it as a question for the user, and keep it off the page until they answer.
 - **Pairs and teams:** in 2-person formats, the two pairs in a foursome are *not* opponents. All four players build one team score. Never use "vs." Write "A + B and C + D".

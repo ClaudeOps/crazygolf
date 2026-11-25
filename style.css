@@ -55,6 +55,7 @@ td.hole { font-weight: 700; font-size: 17px; width: 50px; }
 .card ul { padding-left: 18px; }
 .card li + li { margin-top: 4px; }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
 .nines { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
 .nines h3 { font-size: 20px; }
 .nines .sub { font-size: 14px; font-weight: 600; color: var(--green); margin: 2px 0 8px; }
